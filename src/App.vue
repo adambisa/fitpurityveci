@@ -13,14 +13,12 @@ import Header from './components/Header.vue';
 
 <style>
   .center {
-  border: 5px solid #00aae2;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 body{
-  background-color: #ffffff;
+  background-color:whitesmoke;
 }
 </style>

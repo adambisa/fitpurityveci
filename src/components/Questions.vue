@@ -10,7 +10,7 @@ export default {
         "Odisiel z cvika hned po ziskani bodu?",
         "Submitol zly file projektu?",
         "Odovzdal plagiat?",
-        "Zacal projekt 24 hodin pred odovzdavanim?",
+        "Zacal projekt (menej) 24 hodin pred odovzdavanim?",
         "Skippol polsemestralku?",
         "Urobil IMA2 skor ako IMA1?",
         "Mal 4 matiky v jednom semestri?",
@@ -26,7 +26,15 @@ export default {
         "Rozosmial celu D105?",
         "Mal mobil vo vrecku pocas skusky?",
         "Dosiahol presne minimum na E?",
-        "Presiel predmet bez pritomnosti na jedinej prednaske?"
+        "Presiel predmet bez pritomnosti na jedinej prednaske?",
+        "Odovzdal projekt iba s funkciou help?",
+        "Neprisiel na pisomku/polsemestralku/zapocet kvoli nevolnosti z alkoholu z predoslej noci?",
+        "Dostal reakciu od (vazeneho doktora etc.) Fuchsa?",
+        "Dostal navrhnute zmenit karieru/skolu od profesora?",
+        "Spravil projekt ktory alokoval viac ako terabyte pamate?",
+        "Odregistroval si predmet po zaciatku semestra?",
+        "Odregistrovali mu povinny predmet kvoli kreditovemu stropu?",
+        "Bol 1BIT viac ako raz?",
           ],
       submited: false,
     }
@@ -52,11 +60,12 @@ export default {
         <label for="checkbox"> {{index + 1}}. {{ name }}</label>
       </li>
     </ul>
-      <a  @click="submit" class="button">submit</a>
-      <a  @click="clear" class="button">clear</a>
-    
+    <div class="spaced">
+    <a  @click="submit" class="button">submit</a>
+    <a  @click="clear" class="button">clear</a>
+    </div>
   </div>
-    <br>
+
   <div v-if="submited" class="finale">
     Vas fit purity score: {{names.length-checkedNames.length}}/{{ names.length }}
    </div>
@@ -67,6 +76,7 @@ export default {
 <style scoped>
 body{
   color: black;
+  padding-right: 5;
 }
 .qs{
   padding-top: 0%;
@@ -77,9 +87,6 @@ list-style-type: none;
 label{
   padding-left: 1%;
 }
-button{
-  margin: 5%;
-}
 li input {
   padding: 5px;
 }
@@ -88,16 +95,17 @@ li input {
   font-size: xx-large;
 }
 .button {
+  display: inline-block;
   background-color: #00aae2;
   color: #ff0027;
   padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
+  border-radius: 8px;
 }
 .button:hover{
   background-color:#ff0027 ;
   color: #00aae2;
+  border-radius: 8px;
+
 }
 </style>
