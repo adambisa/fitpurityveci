@@ -1,4 +1,6 @@
 <script>
+import { compileScript } from "vue/compiler-sfc";
+
 export default {
   data() {
     return {
@@ -38,6 +40,41 @@ export default {
         "Bol hostom disciplinarnej komisie?",
         "Vychutnal si parky v termoske?",
       ],
+      engQs: [
+        "Fell asleep on a lecture?",
+        "Stopped going to school for a week?",
+        "Got to the lecture after it was half done?",
+        "Left an exercise class right after points were given?",
+        "Submitted a bad project file?",
+        "Submitted a plagiarized project?",
+        "Started to work on a project < 24 hours before the deadline?",
+        "Skipped a midterm?",
+        "Finished IMA2 before IMA1?",
+        "Had 4 math courses in one semester?",
+        "Faked absence reason documents?",
+        "Got to 3BIT+?",
+        "Crashed the Merlin/Eva server(s)?",
+        "Registered two exercise classes that are in the same time window?",
+        "Broke a glass in Kachna?",
+        "Accidentally submitted a study termination request?",
+        "Swore at a course guarantor in public channels?",
+        "Had an accident with a course guarantor?",
+        "Had a conflict with a teacher?",
+        "Made the whole D105 laugh?",
+        "Had a phone in pocket during an exam?",
+        "Got exactly the minimum amount of points for an E?",
+        "Completed a course without attending a single lecture?",
+        "Submitted a project with only a help function implemented?",
+        "Didn't attend a test/exam due to consequences of drinking alcohol the night before?",
+        "Got a reaction on a course review from an important doctor or whatever e.g. from Fuchs?",
+        "Got a suggestion to change the field of study from a professor?",
+        "Made a project that allocates more than a terabyte of memory?",
+        "Unregistered a course after the semester started?",
+        "Unwillingly had a course unregistered due to credit limits?",
+        "Was a 1BIT more than once?",
+        "Was summoned to a disciplinary hearing?",
+        "Enjoyed sausages from a thermos?",
+      ],
       submited: false,
     };
   },
@@ -47,6 +84,9 @@ export default {
     },
     clear() {
       this.checkedNames = [];
+    },
+    switch_lang() {
+      this.names = this.engQs;
     },
   },
 };
@@ -70,6 +110,7 @@ export default {
       <div class="buttons">
         <a @click="submit" class="button">Submit</a>
         <a @click="clear" class="button">Clear</a>
+        <a @click="switch_lang" class="button">switch lang</a>
       </div>
     </div>
 
