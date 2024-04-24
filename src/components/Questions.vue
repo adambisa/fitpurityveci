@@ -76,6 +76,7 @@ export default {
         "Enjoyed sausages from a thermos?",
       ],
       submited: false,
+      eng: false,
     };
   },
   methods: {
@@ -87,6 +88,7 @@ export default {
     },
     switch_lang() {
       this.names = this.engQs;
+      this.eng = true;
     },
   },
 };
@@ -115,9 +117,16 @@ export default {
     </div>
 
     <div v-if="submited" class="finale">
-      Vas fit purity score: {{ names.length - checkedNames.length }}/{{
-        names.length
-      }}
+      <div v-if="!eng">
+        Vas fit purity score: {{ names.length - checkedNames.length }}/{{
+          names.length
+        }}
+      </div>
+      <div v-if="eng">
+        Your fit purity score: {{ names.length - checkedNames.length }}/{{
+          names.length
+        }}
+      </div>
     </div>
   </body>
 </template>
