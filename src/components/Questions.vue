@@ -22,7 +22,7 @@ export default {
         "Omylom podal OZNUK?",
         "Nadaval na garanta v public chanelli?",
         "Nabural do nejakeho garanta predmetu?",
-        "Pohadal sa s vazenym doktorom Fuchsom?",
+        "Pohadal sa s vyucujucim?",
         "Rozosmial celu D105?",
         "Mal mobil vo vrecku pocas skusky?",
         "Dosiahol presne minimum na E?",
