@@ -35,6 +35,8 @@ export default {
         "Odregistroval si predmet po zaciatku semestra?",
         "Odregistrovali mu povinny predmet kvoli kreditovemu stropu?",
         "Bol 1BIT viac ako raz?",
+        "Bol hostom disciplinarnej komisie?",
+        "Vychutnal si parky v termoske?",
       ],
       submited: false,
     };
