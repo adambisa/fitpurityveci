@@ -6,7 +6,7 @@ export default {
       names: [
         "Zaspal na prednaske?",
         "Vynechal skolu na tyzden?",
-        "Prisiek az po polovici prednasky?",
+        "Prisiel az po polovici prednasky?",
         "Odisiel z cvika hned po ziskani bodu?",
         "Submitol zly file projektu?",
         "Odovzdal plagiat?",
