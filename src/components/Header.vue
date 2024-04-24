@@ -2,8 +2,18 @@
   <div class="head">
     <h1>FIT PURITY TEST</h1>
     <p class="warning">
-      <span>Varovanie:</span> Toto nie je bucket-list, splnenie kazdeho policka
-      bude pravdepodobne viest k predcasnemu ukonceniu studia.
+      <div v-if="!eng">
+        <span >Varovanie:</span> <p>Toto nie je bucket-list, splnenie kazdeho policka
+        bude pravdepodobne viest k predcasnemu ukonceniu studia.</p>
+      
+      </div>
+      <div v-if="eng">
+        <span>
+        Warning:</span>
+        <p>This is not a bucket-list, accomplishing every one of these will likely result in a premature end of your studies.</p>
+      
+      </div>
+
     </p>
   </div>
 </template>
