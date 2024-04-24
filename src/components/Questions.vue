@@ -77,6 +77,7 @@ export default {
       ],
       submited: false,
       eng: false,
+      next: this.engQs,
     };
   },
   methods: {
@@ -87,8 +88,15 @@ export default {
       this.checkedNames = [];
     },
     switch_lang() {
-      this.names = this.engQs;
-      this.eng = true;
+      console.log(this.eng);
+      if (this.eng === false) {
+        this.placeholder = this.names;
+        this.names = this.engQs;
+        this.eng = true;
+      } else {
+        this.names = this.placeholder;
+        this.eng = false;
+      }
     },
   },
 };
@@ -113,6 +121,9 @@ export default {
         <a @click="submit" class="button">Submit</a>
         <a @click="clear" class="button">Clear</a>
         <a @click="switch_lang" class="button">switch lang</a>
+        <a href="https://ivanovanoha.fit"
+          ><img src="https://ivanovanoha.fit/ivan.png" alt=""
+        /></a>
       </div>
     </div>
 
