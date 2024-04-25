@@ -121,9 +121,6 @@ export default {
         <a @click="submit" class="button">Submit</a>
         <a @click="clear" class="button">Clear</a>
         <a @click="switch_lang" class="button">switch lang</a>
-        <a href="https://ivanovanoha.fit"
-          ><img src="https://ivanovanoha.fit/ivan.png" alt=""
-        /></a>
       </div>
     </div>
 
