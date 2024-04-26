@@ -39,7 +39,7 @@ export default {
         "Bol 1BIT viac ako raz?",
         "Bol hostom disciplinarnej komisie?",
         "Vychutnal (a) si parky v termoske?",
-        "Odovzdal (a) kod s cudzim xloginom"
+        "Odovzdal (a) kod s cudzim xloginom?"
       ],
       engQs: [
         "Fell asleep on a lecture?",
