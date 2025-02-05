@@ -39,7 +39,8 @@ export default {
         "Bol 1BIT viac ako raz?",
         "Bol hostom disciplinarnej komisie?",
         "Vychutnal (a) si parky v termoske?",
-        "Odovzdal (a) kod s cudzim xloginom?"
+        "Odovzdal (a) kod s cudzim xloginom?",
+        "neudělal žádný projekt a přesto zvládl předmět"
       ],
       engQs: [
         "Fell asleep on a lecture?",
@@ -75,7 +76,8 @@ export default {
         "Was a 1BIT more than once?",
         "Was summoned to a disciplinary hearing?",
         "Enjoyed sausages from a thermos?",
-        "Submitted a file with someone elses xlogin?"
+        "Submitted a file with someone elses xlogin?",
+        "Did not do a single project and still managed to pass the class?"        
       ],
       submited: false,
       eng: false,
