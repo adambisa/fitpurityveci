@@ -40,7 +40,7 @@ export default {
         "Bol hostom disciplinarnej komisie?",
         "Vychutnal (a) si parky v termoske?",
         "Odovzdal (a) kod s cudzim xloginom?",
-        "neudělal žádný projekt a přesto zvládl předmět"
+        "Neudělal žádný projekt a přesto zvládl předmět?"
       ],
       engQs: [
         "Fell asleep on a lecture?",
