@@ -1,4 +1,6 @@
 <script>
+import { compileScript } from "vue/compiler-sfc";
+
 export default {
   data() {
     return {
@@ -6,7 +8,7 @@ export default {
       names: [
         "Zaspal na prednaske?",
         "Vynechal skolu na tyzden?",
-        "Prisiek az po polovici prednasky?",
+        "Prisiel az po polovici prednasky?",
         "Odisiel z cvika hned po ziskani bodu?",
         "Submitol zly file projektu?",
         "Odovzdal plagiat?",
@@ -15,14 +17,14 @@ export default {
         "Urobil IMA2 skor ako IMA1?",
         "Mal 4 matiky v jednom semestri?",
         "Podal falosnu prekazku v studiu?",
-        "Dostal sa do 3BIT+?",
+        "Dostal sa do 4BIT+?",
         "Zhodil Merlina/Evu?",
         "Zaregistroval si 2 prekryvajuce sa cvika?",
         "Rozbil pohar v kachne?",
         "Omylom podal OZNUK?",
         "Nadaval na garanta v public chanelli?",
         "Nabural do nejakeho garanta predmetu?",
-        "Pohadal sa s vazenym doktorom Fuchsom?",
+        "Pohadal sa s vyucujucim?",
         "Rozosmial celu D105?",
         "Mal mobil vo vrecku pocas skusky?",
         "Dosiahol presne minimum na E?",
@@ -35,8 +37,51 @@ export default {
         "Odregistroval si predmet po zaciatku semestra?",
         "Odregistrovali mu povinny predmet kvoli kreditovemu stropu?",
         "Bol 1BIT viac ako raz?",
+        "Bol hostom disciplinarnej komisie?",
+        "Vychutnal (a) si parky v termoske?",
+        "Odovzdal (a) kod s cudzim xloginom?",
+        "Neudělal žádný projekt a přesto zvládl předmět?"
+      ],
+      engQs: [
+        "Fell asleep on a lecture?",
+        "Stopped going to school for a week?",
+        "Got to the lecture after it was half done?",
+        "Left an exercise class right after points were given?",
+        "Submitted a bad project file?",
+        "Submitted a plagiarized project?",
+        "Started to work on a project < 24 hours before the deadline?",
+        "Skipped a midterm?",
+        "Finished IMA2 before IMA1?",
+        "Had 4 math courses in one semester?",
+        "Faked absence reason documents?",
+        "Got to 3BIT+?",
+        "Crashed the Merlin/Eva server(s)?",
+        "Registered two exercise classes that are in the same time window?",
+        "Broke a glass in Kachna?",
+        "Accidentally submitted a study termination request?",
+        "Swore at a course guarantor in public channels?",
+        "Had an accident with a course guarantor?",
+        "Had a conflict with a teacher?",
+        "Made the whole D105 laugh?",
+        "Had a phone in pocket during an exam?",
+        "Got exactly the minimum amount of points for an E?",
+        "Completed a course without attending a single lecture?",
+        "Submitted a project with only a help function implemented?",
+        "Didn't attend a test/exam due to consequences of drinking alcohol the night before?",
+        "Got a reaction on a course review from an important doctor or whatever e.g. from Fuchs?",
+        "Got a suggestion to change the field of study from a professor?",
+        "Made a project that allocates more than a terabyte of memory?",
+        "Unregistered a course after the semester started?",
+        "Unwillingly had a course unregistered due to credit limits?",
+        "Was a 1BIT more than once?",
+        "Was summoned to a disciplinary hearing?",
+        "Enjoyed sausages from a thermos?",
+        "Submitted a file with someone elses xlogin?",
+        "Did not do a single project and still managed to pass the class?"        
       ],
       submited: false,
+      eng: false,
+      next: this.engQs,
     };
   },
   methods: {
@@ -45,6 +90,17 @@ export default {
     },
     clear() {
       this.checkedNames = [];
+    },
+    switch_lang() {
+      console.log(this.eng);
+      if (this.eng === false) {
+        this.placeholder = this.names;
+        this.names = this.engQs;
+        this.eng = true;
+      } else {
+        this.names = this.placeholder;
+        this.eng = false;
+      }
     },
   },
 };
@@ -68,13 +124,21 @@ export default {
       <div class="buttons">
         <a @click="submit" class="button">Submit</a>
         <a @click="clear" class="button">Clear</a>
+        <a @click="switch_lang" class="button">switch lang</a>
       </div>
     </div>
 
     <div v-if="submited" class="finale">
-      Vas fit purity score: {{ names.length - checkedNames.length }}/{{
-        names.length
-      }}
+      <div v-if="!eng">
+        Vas fit purity score: {{ names.length - checkedNames.length }}/{{
+          names.length
+        }}
+      </div>
+      <div v-if="eng">
+        Your fit purity score: {{ names.length - checkedNames.length }}/{{
+          names.length
+        }}
+      </div>
     </div>
   </body>
 </template>
@@ -106,6 +170,8 @@ label {
 
 .buttons {
   display: flex;
+  justify-content: center;
+  align-content: center;
   gap: 0.8rem;
   padding-bottom: 2.4rem;
   font-family: "Teko", sans-serif;
