@@ -17,7 +17,7 @@ export default {
         "Urobil IMA2 skor ako IMA1?",
         "Mal 4 matiky v jednom semestri?",
         "Podal falosnu prekazku v studiu?",
-        "Dostal sa do 3BIT+?",
+        "Dostal sa do 4BIT+?",
         "Zhodil Merlina/Evu?",
         "Zaregistroval si 2 prekryvajuce sa cvika?",
         "Rozbil pohar v kachne?",
@@ -170,6 +170,8 @@ label {
 
 .buttons {
   display: flex;
+  justify-content: center;
+  align-content: center;
   gap: 0.8rem;
   padding-bottom: 2.4rem;
   font-family: "Teko", sans-serif;
