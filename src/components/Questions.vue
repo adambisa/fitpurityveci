@@ -79,7 +79,7 @@ export default {
         "Enjoyed sausages from a thermos?",
         "Submitted a file with someone elses xlogin?",
         "Did not do a single project and still managed to pass the class?",
-        "Mistook a room at FIT for a room at FEKT?"        
+        "Mistook a room at FIT for a room at FEKT? "        
       ],
       submited: false,
       eng: false,
