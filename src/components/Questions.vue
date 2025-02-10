@@ -40,7 +40,8 @@ export default {
         "Bol hostom disciplinarnej komisie?",
         "Vychutnal (a) si parky v termoske?",
         "Odovzdal (a) kod s cudzim xloginom?",
-        "Neudělal žádný projekt a přesto zvládl předmět?"
+        "Neudělal žádný projekt a přesto zvládl předmět?",
+        "Pomylil si miestnost na FITe s miestnostou na FEKTe?"    
       ],
       engQs: [
         "Fell asleep on a lecture?",
@@ -77,7 +78,8 @@ export default {
         "Was summoned to a disciplinary hearing?",
         "Enjoyed sausages from a thermos?",
         "Submitted a file with someone elses xlogin?",
-        "Did not do a single project and still managed to pass the class?"        
+        "Did not do a single project and still managed to pass the class?",
+        "Mistook a room at FIT for a room at FEKT?"        
       ],
       submited: false,
       eng: false,
