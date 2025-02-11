@@ -41,7 +41,9 @@ export default {
         "Vychutnal (a) si parky v termoske?",
         "Odovzdal (a) kod s cudzim xloginom?",
         "Neudělal žádný projekt a přesto zvládl předmět?",
-        "Pomylil si miestnost na FITe s miestnostou na FEKTe?"    
+        "Pomylil si miestnost na FITe s miestnostou na FEKTe?",
+        "Dostal sa na strechu FITu?",
+        "Bol obetou incidentu v IMA2?"   
       ],
       engQs: [
         "Fell asleep on a lecture?",
@@ -79,7 +81,9 @@ export default {
         "Enjoyed sausages from a thermos?",
         "Submitted a file with someone elses xlogin?",
         "Did not do a single project and still managed to pass the class?",
-        "Mistook a room at FIT for a room at FEKT?"        
+        "Mistook a room at FIT for a room at FEKT?",
+        "Stepped foot on the roof of FIT?",
+        "Fell victim to an incident in IMA2?"        
       ],
       submited: false,
       eng: false,
