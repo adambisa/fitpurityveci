@@ -161,7 +161,7 @@ body {
 }
 
 .qs {
-  width: 100%;
+  width: 100dvh;
 }
 
 .qs__list {
