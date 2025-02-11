@@ -46,7 +46,7 @@ export default {
         "Bol obetou incidentu v IMA2?"   
       ],
       engQs: [
-        "Fell asleep on a lecture?",
+        "Fell asleep during a lecture?",
         "Stopped going to school for a week?",
         "Got to the lecture after it was half done?",
         "Left an exercise class right after points were given?",

@@ -12,5 +12,7 @@ import Header from "./components/Header.vue";
 <style>
 body {
   background-color: whitesmoke;
+  width: 100dvw;
+  height: 100dvh;
 }
 </style>
