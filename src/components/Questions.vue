@@ -145,6 +145,9 @@ export default {
           names.length
         }}
       </div>
+      <p>
+        Feel free to check out the code. <a href="https://github.com/adambisa/fitpurityveci">here</a>
+      </p>
     </div>
   </body>
 </template>
